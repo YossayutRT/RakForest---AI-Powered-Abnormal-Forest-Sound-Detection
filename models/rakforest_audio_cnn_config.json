@@ -1,0 +1,53 @@
+{
+  "model_name": "RakForest AudioCNN baseline",
+  "checkpoint": "models/rakforest_audio_cnn_best.pt",
+  "class_names": [
+    "fire",
+    "chainsaw",
+    "vehicle",
+    "human_activity",
+    "threat_tactical",
+    "weather",
+    "natural_ambient",
+    "silence",
+    "other"
+  ],
+  "class_to_index": {
+    "fire": 0,
+    "chainsaw": 1,
+    "vehicle": 2,
+    "human_activity": 3,
+    "threat_tactical": 4,
+    "weather": 5,
+    "natural_ambient": 6,
+    "silence": 7,
+    "other": 8
+  },
+  "input": {
+    "sample_rate": 16000,
+    "duration_seconds": 4.0,
+    "num_samples": 64000,
+    "channels": 1
+  },
+  "features": {
+    "type": "log_mel_spectrogram",
+    "n_mels": 64,
+    "n_fft": 1024,
+    "hop_length": 320,
+    "per_clip_standardization": true
+  },
+  "training": {
+    "seed": 42,
+    "batch_size": 32,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "max_epochs": 20,
+    "early_stopping_patience": 4,
+    "selection_metric": "validation macro-F1",
+    "best_epoch": 20,
+    "best_validation_macro_f1": 0.820475096240192
+  },
+  "manifest": "data/processed/processed_manifest.parquet",
+  "manifest_signature": "7434b3439e2ce601bd6898946471c4c1a30531276599e3d24bb674a44b59b265",
+  "test_split_used": false
+}

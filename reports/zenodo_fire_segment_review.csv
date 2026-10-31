@@ -1,0 +1,12 @@
+segment_id,source_file,segment_index,start_seconds,end_seconds,fire_audible,speech_audible,segment_quality,notes,reviewer,present_labels
+37a19deca8__00000,data/raw/zenodo_fire/extracted/wav/0exp1b.WAV,0,0.0,4.0,unsure,unsure,unsure,,,[]
+37a19deca8__00001,data/raw/zenodo_fire/extracted/wav/0exp1b.WAV,1,4.0,8.0,unsure,unsure,unsure,,,
+37a19deca8__00002,data/raw/zenodo_fire/extracted/wav/0exp1b.WAV,2,8.0,12.0,unsure,unsure,unsure,,,
+37a19deca8__00003,data/raw/zenodo_fire/extracted/wav/0exp1b.WAV,3,12.0,16.0,unsure,unsure,unsure,,,
+37a19deca8__00004,data/raw/zenodo_fire/extracted/wav/0exp1b.WAV,4,16.0,20.0,unsure,unsure,unsure,,,
+37a19deca8__00005,data/raw/zenodo_fire/extracted/wav/0exp1b.WAV,5,20.0,24.0,unsure,unsure,unsure,,,
+37a19deca8__00006,data/raw/zenodo_fire/extracted/wav/0exp1b.WAV,6,24.0,28.0,unsure,unsure,unsure,,,
+37a19deca8__00007,data/raw/zenodo_fire/extracted/wav/0exp1b.WAV,7,28.0,32.0,unsure,unsure,unsure,,,
+37a19deca8__00008,data/raw/zenodo_fire/extracted/wav/0exp1b.WAV,8,32.0,36.0,unsure,unsure,unsure,,,
+37a19deca8__00009,data/raw/zenodo_fire/extracted/wav/0exp1b.WAV,9,36.0,40.0,unsure,unsure,unsure,,,
+37a19deca8__00010,data/raw/zenodo_fire/extracted/wav/0exp1b.WAV,10,40.0,44.0,unsure,unsure,unsure,,,[]

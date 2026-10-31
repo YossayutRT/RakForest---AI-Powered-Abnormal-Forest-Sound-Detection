@@ -1,0 +1,43 @@
+# Dependencies and generated app output
+node_modules/
+.next/
+out/
+dist/
+build/
+
+# Test output and caches (keep tests/fixtures and delivery screenshots in docs/)
+test-results/
+playwright-report/
+blob-report/
+coverage/
+.cache/
+.pnpm-store/
+*.tsbuildinfo
+
+# Local environment and credentials: commit only the empty example
+.env*
+!.env.example
+*.pem
+*.key
+
+# Local uploads / model weights belong outside this frontend repository
+/uploads/
+/models/
+*.pt
+*.pth
+*.h5
+*.hdf5
+*.keras
+*.onnx
+*.ckpt
+
+# Temporary files, logs, and OS metadata
+*.log
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Temporary clean-install verification workspace
+/.onboarding-check-*/

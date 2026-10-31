@@ -1,0 +1,73 @@
+{
+  "model_name": "RakForest AudioCNN multi-label baseline",
+  "model_type": "multilabel_audio_cnn",
+  "schema_version": "multilabel-v1",
+  "checkpoint": "models/rakforest_audio_cnn_multilabel_best.pt",
+  "class_names": [
+    "fire",
+    "chainsaw",
+    "vehicle",
+    "human_activity",
+    "threat_tactical",
+    "weather",
+    "natural_ambient",
+    "silence",
+    "other"
+  ],
+  "class_to_index": {
+    "fire": 0,
+    "chainsaw": 1,
+    "vehicle": 2,
+    "human_activity": 3,
+    "threat_tactical": 4,
+    "weather": 5,
+    "natural_ambient": 6,
+    "silence": 7,
+    "other": 8
+  },
+  "input": {
+    "sample_rate": 16000,
+    "duration_seconds": 4.0,
+    "num_samples": 64000,
+    "channels": 1
+  },
+  "features": {
+    "type": "log_mel_spectrogram",
+    "n_mels": 64,
+    "n_fft": 1024,
+    "hop_length": 320,
+    "per_clip_standardization": true
+  },
+  "targets": {
+    "encoding": "multi_hot",
+    "activation": "sigmoid",
+    "default_threshold": 0.5,
+    "silence_other_are_mutually_exclusive_tags": true
+  },
+  "augmentation": {
+    "type": "waveform_mix",
+    "probability": 0.05,
+    "secondary_snr_db_range": [
+      -6.0,
+      3.0
+    ],
+    "excluded_tags": [
+      "other",
+      "silence"
+    ]
+  },
+  "training": {
+    "seed": 42,
+    "batch_size": 32,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "max_epochs": 20,
+    "early_stopping_patience": 4,
+    "selection_metric": "validation macro-F1 at 0.5",
+    "best_epoch": 11,
+    "best_validation_macro_f1": 0.7138725486031142
+  },
+  "manifest": "data/processed/processed_manifest.parquet",
+  "manifest_signature": "21384c97ca16a2f5b7a362a4703b7e6dcf9696d5333be887b8dab9e0627c700b",
+  "test_split_used": false
+}

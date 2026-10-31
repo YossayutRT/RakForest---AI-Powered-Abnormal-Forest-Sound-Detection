@@ -1,0 +1,171 @@
+{
+  "version": 1,
+  "path_base": "project_root",
+  "datasets": {
+    "primary": {
+      "datasec_vehicle_v2": {
+        "path": "data/raw/datasec_vehicle_v2/extracted/DATASEC",
+        "source_path": "data/raw/datasec_vehicle_v2",
+        "exists": true,
+        "has_data": true,
+        "observed_file_count": 5048,
+        "completeness": "unverified",
+        "notes": "Contains extracted WAV files; source archive is also present."
+      },
+      "esc50": {
+        "path": "data/raw/esc50/ESC-50-master",
+        "source_path": "data/raw/esc50",
+        "exists": true,
+        "has_data": true,
+        "observed_file_count": 2009,
+        "completeness": "unverified",
+        "notes": "Extracted repository includes audio and metadata; archive is also present."
+      },
+      "footstep_set": {
+        "path": "data/raw/footstep_set/extracted/Footstep-set",
+        "source_path": "data/raw/footstep_set",
+        "exists": true,
+        "has_data": true,
+        "observed_file_count": 2128,
+        "completeness": "unverified",
+        "notes": "Extracted dataset includes audio and metadata; archive is also present."
+      },
+      "fsc22": {
+        "path": "data/raw/fsc22/extracted",
+        "source_path": "data/raw/fsc22",
+        "exists": true,
+        "has_data": true,
+        "observed_file_count": 2027,
+        "completeness": "unverified",
+        "notes": "Extracted audio and metadata directories plus source archive are present."
+      },
+      "fsd50k_metadata": {
+        "path": "data/raw/fsd50k_metadata/extracted/FSD50K.dev_audio",
+        "source_path": "data/raw/fsd50k_metadata",
+        "exists": true,
+        "has_data": true,
+        "observed_file_count": 40966,
+        "completeness": "unverified",
+        "notes": "Dev audio is extracted; metadata/ground-truth archives and split audio parts are present. Full dataset integrity/completeness is unverified."
+      },
+      "rfcx_frugalai": {
+        "path": "data/raw/rfcx_frugalai/hub_files/data",
+        "source_path": "data/raw/rfcx_frugalai",
+        "exists": true,
+        "has_data": true,
+        "observed_file_count": 9,
+        "completeness": "unverified",
+        "notes": "Train/test Parquet shards and provenance file are present; dataset completeness is unverified."
+      },
+      "fire_google_drive": {
+        "path": "data/raw/fire_google_drive",
+        "exists": true,
+        "has_data": true,
+        "observed_file_count": 721,
+        "completeness": "unverified",
+        "notes": "721 WAV files observed."
+      },
+      "zenodo_fire": {
+        "path": "data/raw/zenodo_fire/extracted/wav",
+        "source_path": "data/raw/zenodo_fire",
+        "exists": true,
+        "has_data": true,
+        "observed_file_count": 47,
+        "completeness": "unverified",
+        "notes": "47 extracted WAV files and source archive are present; distinct from fire_event_detection_zenodo."
+      },
+      "vehicle_sounds_colab": {
+        "path": "data/raw/vehicle_sounds_colab",
+        "exists": true,
+        "has_data": false,
+        "observed_file_count": 0,
+        "completeness": "unverified",
+        "notes": "No data has been downloaded for this dataset; directory contains only a placeholder.",
+        "download_status": "not_downloaded"
+      }
+    },
+    "additional": {
+      "animal_voice": {
+        "path": "data/raw/animal_voice",
+        "exists": true,
+        "has_data": false,
+        "observed_file_count": 0,
+        "completeness": "unverified",
+        "notes": "Placeholder only."
+      },
+      "fire_event_detection_zenodo": {
+        "path": "data/raw/fire_event_detection_zenodo",
+        "exists": true,
+        "has_data": false,
+        "observed_file_count": 0,
+        "completeness": "unverified",
+        "notes": "Empty directory; distinct from zenodo_fire."
+      },
+      "forest_sound": {
+        "path": "data/raw/forest_sound",
+        "exists": true,
+        "has_data": false,
+        "observed_file_count": 0,
+        "completeness": "unverified",
+        "notes": "Placeholder only."
+      },
+      "forest_wild_fire_sound": {
+        "path": "data/raw/forest_wild_fire_sound",
+        "exists": true,
+        "has_data": false,
+        "observed_file_count": 0,
+        "completeness": "unverified",
+        "notes": "Placeholder only."
+      },
+      "sample": {
+        "path": "data/raw/sample",
+        "exists": true,
+        "has_data": true,
+        "observed_file_count": 2,
+        "completeness": "unverified",
+        "notes": "Two sample WAV files; not treated as a full dataset."
+      },
+      "fsdnoisy18k_metadata": {
+        "path": "data/raw/fsdnoisy18k_metadata",
+        "source_path": "data/raw/fsdnoisy18k_metadata",
+        "exists": true,
+        "has_data": true,
+        "observed_file_count": 2,
+        "completeness": "unverified",
+        "notes": "Only documentation and metadata ZIP archives are present; no extracted audio was observed. Metadata-only; not audio-ready.",
+        "data_status": "metadata_only",
+        "audio_ready": false
+      },
+      "nonspeech7k": {
+        "path": "data/raw/nonspeech7k",
+        "source_path": "data/raw/nonspeech7k",
+        "exists": true,
+        "has_data": false,
+        "observed_file_count": 0,
+        "completeness": "unverified",
+        "notes": "Directory contains only a placeholder; dataset files were not observed."
+      },
+      "vocalsound_16k": {
+        "path": "data/raw/vocalsound_16k",
+        "source_path": "data/raw/vocalsound_16k",
+        "exists": true,
+        "has_data": false,
+        "observed_file_count": 0,
+        "completeness": "unverified",
+        "notes": "Directory contains only a placeholder; dataset files were not observed."
+      }
+    }
+  },
+  "inspection": {
+    "raw_root": "data/raw",
+    "observed_top_level_dataset_directories": 17,
+    "completeness_policy": "Directory presence and observed files do not establish dataset completeness.",
+    "configuration_conflicts": "No prior configs directory or dataset path configuration was present in the inspected workspace.",
+    "snapshot_fields": [
+      "exists",
+      "has_data",
+      "observed_file_count"
+    ],
+    "snapshot_policy": "These filesystem inspection values are snapshots only and must be rechecked when a Notebook runs."
+  }
+}

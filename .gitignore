@@ -1,26 +1,80 @@
-# Dataset directories (keep large/private data out of GitHub)
-forest_sound_dataset/
-FSC22/
-Animal_Voice/
-processed/
-prepair_sound_venv/
+# Local credentials and machine-specific settings
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
 
-# Audio files (anywhere in the repository)
-*.wav
-*.WAV
-*.wave
-*.aiff  
-*.aif
-*.flac
-*.mp3
-*.m4a
-*.ogg
-*.opus
-*.aac
-*.wma
+# Downloaded datasets and generated artifacts
+data/raw/**
+!data/raw/
+!data/raw/**/
+!data/raw/**/.gitkeep
+data/incoming_audio/*
+!data/incoming_audio/.gitkeep
+data/interim/*
+!data/interim/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/manifests/*
+!data/manifests/.gitkeep
 
-# Notebook and Python-generated local files
-.ipynb_checkpoints/
-.venv/
+# Trained model weights are large; keep the small JSON configs in models/
+models/*.pt
+models/*.pth
+models/*.ckpt
+models/*.onnx
+models/*.h5
+models/*.hdf5
+models/*.keras
+
+# Generated analysis, evaluation, and inference outputs
+reports/audio_inventory.parquet
+reports/cleaning_audit.parquet
+reports/test_predictions.parquet
+reports/multilabel_test_predictions.parquet
+reports/inference_predictions.csv
+reports/inference_file_summary.csv
+reports/post_cleaning_*.csv
+reports/*metrics*.json
+reports/*metrics*.csv
+reports/*training_history*.csv
+reports/test_confusion_matrix.csv
+reports/test_classification_report.json
+reports/eda_cleaning_summary.json
+reports/dataset_overview.csv
+reports/near_duplicate_candidates.csv
+reports/provenance_candidates.csv
+reports/label_mapping_audit.csv
+reports/excluded_files_review.csv
+reports/zenodo_fire_review_queue.csv
+
+# Notebook checkpoints and local caches
+**/.ipynb_checkpoints/
+# Archived Colab export with embedded outputs; use notebooks/ for maintained notebooks
+/สำเนาของ_RakForest_Data_progress_v2.ipynb
+**/.venv/
+**/node_modules/
+.cache/
+**/.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+*.log
+*.tmp
+*.part
+*.kaggle-partial
+
+# Python
 __pycache__/
 *.py[cod]
+
+# macOS
+.DS_Store
+._*
+.AppleDouble
+.LSOverride
