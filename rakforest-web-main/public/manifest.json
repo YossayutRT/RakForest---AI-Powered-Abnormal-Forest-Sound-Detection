@@ -1,0 +1,11 @@
+{
+  "name": "RakForest — ระบบเฝ้าระวังเสียงผิดปกติในป่าด้วย AI",
+  "short_name": "RakForest",
+  "description": "ระบบตรวจจับเสียงผิดปกติในป่า บริหารจัดการโซนป่าไม้ และปฏิบัติการภาคสนาม",
+  "start_url": "/home",
+  "display": "standalone",
+  "background_color": "#112A1F",
+  "theme_color": "#1B4332",
+  "lang": "th",
+  "orientation": "any"
+}
